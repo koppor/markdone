@@ -22,7 +22,7 @@
 - Top level heading is project name.
 - Can contain sub-projects which are represented by sub-headers. (`##`, `###`, etc.)
 
-```text
+```markdown
 # Project Name
 
 ## Sub Project One
@@ -41,7 +41,7 @@
 - A task is considered 'relative' if it does not contain complete task details and relies on surrounding folder and file structure to give full details.
 - A task is considered 'absolute' if it contains all details so that it can be placed in a file structure without further details being provided.
 
-```text
+```markdown
 - [ ] Make the world a better place.
 ```
 
@@ -52,7 +52,7 @@
   - Single letter surrounded by parenthesis eg. `(A)`
   - Prioritized by lowest alphabet position.
 
-```text
+```markdown
 - [ ] (A) Make the world a better place.
 ```
 
@@ -63,7 +63,7 @@
   - eg. `@work @school @boss`
   - A task may contain many contexts.
 
-```text
+```markdown
 - [ ] (A) Make the world a better place. @home
 ```
 
@@ -73,7 +73,7 @@
   - Markdone assumes a project tag based on the file header. Overriding the project in a task line will invalidate the document.
   - Typically only displayed when representing a projects 'Next Action' in a collections TODO.&#8203;md file.
 
-```text
+```markdown
 - [ ] (A) Make the world a better place. @home #Legacy
 ```
 
@@ -83,7 +83,7 @@
   - Markdone assumes a collection tag based on the file location relative to the root directory. Overriding the collection in a task line will invalidate the document.
   - Typically only displayed when representing a sub collections next action within a parent collections TODO.&#8203;md file.
 
-```text
+```markdown
 - [ ] (A) Make the world a better place. @home #Legacy /BigIdeas
 ```
 
@@ -96,7 +96,7 @@
   - A value without a key is considered a flag. It's presense indicates the value is `TRUE` its absence `FALSE` eg. `:waiting-for`
   - Standard key words are reserved for dates. `start`, `stop`, and `due` All dates are in the format YYYY-MM-DD
 
-```text
+```markdown
 - [ ] (A) Make the world a better place. @home #Legacy /BigIdeas start:2018-01-01 :waiting-for
 ```
 
@@ -104,7 +104,7 @@
   - Due is a special tag and is assumed if a date appears immediately after the prefix and priority (if there is one).
   - eg. `- [ ] (A) 2018-06-30 Pay rent.` is equivalent to `- [ ] (A) Pay rent. due:2018-06-30`
 
-```text
+```markdown
 - [ ] (A) 2020-01-01 Make the world a better place. @home #Legacy /BigIdeas start:2018-01-01 :waiting-for
 ```
 
@@ -113,7 +113,7 @@
 - Any non-empty line of text that does not start with prefix defined elsewhere in this specification.
 - Info lines are ignored by processing, if information is pertinent to a task consider how to include it in it's description.
 
-```text
+```markdown
 This line will not be processed because it does not have a defined prefix.
 ```
 
